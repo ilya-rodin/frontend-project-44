@@ -11,7 +11,7 @@ const generateRandomNumbers = () => {
 const generateOperator = (operators) =>
   operators[Math.floor(Math.random() * operators.length)];
 
-export default (userName) => {
+export default () => {
   const operators = ['+', '-', '*'];
   const numbers = generateRandomNumbers();
   const randomOperator = generateOperator(operators);
@@ -40,7 +40,6 @@ export default (userName) => {
     console.log(
       `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
     );
-    console.log(`Let's try again, ${userName}!`);
     return false;
   }
   console.log('Correct!');
