@@ -10,4 +10,4 @@
 
 ### Calc game demo
 
-[![asciicast](https://asciinema.org/a/kIti3bUMQp2XEkfmhfJqqYyUV.svg)](https://asciinema.org/a/kIti3bUMQp2XEkfmhfJqqYyUV)
+[![asciicast](https://asciinema.org/a/nSqsgtkBv4q6jIhyrbknm2bs7.svg)](https://asciinema.org/a/nSqsgtkBv4q6jIhyrbknm2bs7)
