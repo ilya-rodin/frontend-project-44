@@ -6,7 +6,7 @@
 
 ### Even game demo
 
-[![asciicast](https://asciinema.org/a/pIwyxZtnDqMr0kd2OPWOhhFU1.svg)](https://asciinema.org/a/pIwyxZtnDqMr0kd2OPWOhhFU1)
+[![asciicast](https://asciinema.org/a/0gp9MSJcSAIC5WrdmUXYiaZRs.svg)](https://asciinema.org/a/0gp9MSJcSAIC5WrdmUXYiaZRs)
 
 ### Calc game demo
 
