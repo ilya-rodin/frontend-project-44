@@ -4,9 +4,28 @@
   "description": "[![Actions Status](https://github.com/ilya-rodin/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/ilya-rodin/frontend-project-44/actions)",
   "main": "index.js",
   "type": "module",
+<<<<<<< HEAD
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ilya Rodin",
   "license": "ISC"
+=======
+  "bin": {
+    "code": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilya-rodin/frontend-project-44.git"
+  },
+  "author": "Ilya Rodin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilya-rodin/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/ilya-rodin/frontend-project-44#readme"
+>>>>>>> fcab5a278c67b2a5bb8be297be3245ae676895a4
 }
