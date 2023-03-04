@@ -36,12 +36,5 @@ export default () => {
   console.log(`Question: ${numbers[0]} ${randomOperator} ${numbers[1]}`);
   const userAnswer = readlineSync.questionInt('Your answer: ');
 
-  if (userAnswer !== correctAnswer) {
-    console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-    );
-    return false;
-  }
-  console.log('Correct!');
-  return true;
+  return [userAnswer, correctAnswer];
 };
