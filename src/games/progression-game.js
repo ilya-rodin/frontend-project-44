@@ -4,6 +4,7 @@ const generateProgression = () => {
   const progression = [];
   const progressionLength = 5 + Math.floor(Math.random() * 5 + 1);
   const progressionDiff = Math.floor(Math.random() * 15 + 1);
+
   let previous;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === 0) {
@@ -16,6 +17,7 @@ const generateProgression = () => {
       progression.push(item);
     }
   }
+
   return progression;
 };
 
@@ -23,6 +25,7 @@ const hideRandomElement = (progression) => {
   const hiddenElementIndex = Math.floor(Math.random() * progression.length);
   const hiddenElement = progression[hiddenElementIndex];
   progression[hiddenElementIndex] = '..';
+
   return [hiddenElement, progression.join(' ')];
 };
 
