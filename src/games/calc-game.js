@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
 
-const generateRandomNumbers = () => {
+const generateRandomNumbers = (maxNumber) => {
   const result = [];
   for (let i = 0; i < 2; i += 1) {
-    result.push(Math.floor(Math.random() * 50 + 1));
+    result.push(Math.floor(Math.random() * maxNumber + 1));
   }
   return result;
 };
@@ -13,7 +13,7 @@ const generateOperator = (operators) =>
 
 export default () => {
   const operators = ['+', '-', '*'];
-  const numbers = generateRandomNumbers();
+  const numbers = generateRandomNumbers(50);
   const [firstNumber, secondNumber] = numbers;
   const randomOperator = generateOperator(operators);
 

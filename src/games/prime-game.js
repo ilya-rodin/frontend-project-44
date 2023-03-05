@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import generateNumber from '../generate-number.js';
 
 const checkPrime = (number) => {
   let isPrime = number !== 1;
@@ -12,7 +13,7 @@ const checkPrime = (number) => {
 };
 
 export default () => {
-  const number = Math.floor(Math.random() * 35 + 1);
+  const number = generateNumber(35);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
 
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');

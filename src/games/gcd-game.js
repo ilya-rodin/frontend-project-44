@@ -11,15 +11,15 @@ const calcGCD = (firstNumber, secondNumber) => {
   return firstNumber;
 };
 
-const generateRandomNumbers = () => {
+const generateRandomNumbers = (maxNumber) => {
   return [
-    Math.floor(Math.random() * 50 + 1),
-    Math.floor(Math.random() * 50 + 1),
+    Math.floor(Math.random() * maxNumber + 1),
+    Math.floor(Math.random() * maxNumber + 1),
   ];
 };
 
 export default () => {
-  const [firstNumber, secondNumber] = generateRandomNumbers();
+  const [firstNumber, secondNumber] = generateRandomNumbers(50);
   console.log('Find the greatest common divisor of given numbers.');
   console.log(`Question: ${firstNumber} ${secondNumber}`);
 

@@ -1,14 +1,16 @@
 import readlineSync from 'readline-sync';
+import generateNumber from '../generate-number.js';
 
 const generateProgression = () => {
+  const minLength = 5;
   const progression = [];
-  const progressionLength = 5 + Math.floor(Math.random() * 5 + 1);
+  const progressionLength = minLength + generateNumber(5);
   const progressionDiff = Math.floor(Math.random() * 15 + 1);
 
   let previous;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === 0) {
-      const firstItem = Math.floor(Math.random() * 30 + 1);
+      const firstItem = generateNumber(20);
       progression.push(firstItem);
       previous = firstItem;
     } else {

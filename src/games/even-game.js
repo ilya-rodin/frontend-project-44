@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
+import generateNumber from '../generate-number.js';
 
 export default () => {
-  const number = Math.floor(Math.random() * 100) + 1;
+  const number = generateNumber(100);
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
