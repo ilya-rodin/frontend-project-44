@@ -7,7 +7,7 @@ export default (playOneRound, repeats) => {
 
     if (userAnswer !== correctAnswer) {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
       return;

@@ -1,22 +1,22 @@
 import readlineSync from 'readline-sync';
 
 const calcGCD = (firstNumber, secondNumber) => {
-  while (firstNumber !== secondNumber) {
-    if (firstNumber > secondNumber) {
-      firstNumber -= secondNumber;
+  let first = firstNumber;
+  let second = secondNumber;
+  while (first !== second) {
+    if (first > second) {
+      first -= second;
     } else {
-      secondNumber -= firstNumber;
+      second -= firstNumber;
     }
   }
-  return firstNumber;
+  return first;
 };
 
-const generateRandomNumbers = (maxNumber) => {
-  return [
-    Math.floor(Math.random() * maxNumber + 1),
-    Math.floor(Math.random() * maxNumber + 1),
-  ];
-};
+const generateRandomNumbers = (maxNumber) => [
+  Math.floor(Math.random() * maxNumber + 1),
+  Math.floor(Math.random() * maxNumber + 1),
+];
 
 export default () => {
   const [firstNumber, secondNumber] = generateRandomNumbers(50);

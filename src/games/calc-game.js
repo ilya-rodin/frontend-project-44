@@ -8,8 +8,7 @@ const generateRandomNumbers = (maxNumber) => {
   return result;
 };
 
-const generateOperator = (operators) =>
-  operators[Math.floor(Math.random() * operators.length)];
+const generateOperator = (operators) => operators[Math.floor(Math.random() * operators.length)];
 
 export default () => {
   const operators = ['+', '-', '*'];
