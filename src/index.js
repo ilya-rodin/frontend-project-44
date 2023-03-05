@@ -3,9 +3,9 @@ import greetUser from './cli.js';
 export default (callback, repeats) => {
   const userName = greetUser();
   for (let i = 0; i < repeats; i += 1) {
-    const answers = callback(userName);
+    const [userAnswer, correctAnswer] = callback(userName);
 
-    if (answers[0] !== answers[1]) {
+    if (userAnswer !== correctAnswer) {
       console.log(`Let's try again, ${userName}!`);
       return;
     }

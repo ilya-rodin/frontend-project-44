@@ -14,18 +14,19 @@ const generateOperator = (operators) =>
 export default () => {
   const operators = ['+', '-', '*'];
   const numbers = generateRandomNumbers();
+  const [firstNumber, secondNumber] = numbers;
   const randomOperator = generateOperator(operators);
 
   let correctAnswer;
   switch (randomOperator) {
     case '+':
-      correctAnswer = numbers[0] + numbers[1];
+      correctAnswer = firstNumber + secondNumber;
       break;
     case '-':
-      correctAnswer = numbers[0] - numbers[1];
+      correctAnswer = firstNumber - secondNumber;
       break;
     case '*':
-      correctAnswer = numbers[0] * numbers[1];
+      correctAnswer = firstNumber * secondNumber;
       break;
     default:
       console.log('No match operator');
@@ -33,7 +34,7 @@ export default () => {
   }
 
   console.log('What is the result of the expression?');
-  console.log(`Question: ${numbers[0]} ${randomOperator} ${numbers[1]}`);
+  console.log(`Question: ${firstNumber} ${randomOperator} ${secondNumber}`);
   const userAnswer = readlineSync.questionInt('Your answer: ');
 
   return [userAnswer, correctAnswer];
