@@ -6,8 +6,8 @@
 
 ### Even game demo
 
-[![asciicast](https://asciinema.org/a/pIwyxZtnDqMr0kd2OPWOhhFU1.svg)](https://asciinema.org/a/pIwyxZtnDqMr0kd2OPWOhhFU1)
+[![asciicast](https://asciinema.org/a/0gp9MSJcSAIC5WrdmUXYiaZRs.svg)](https://asciinema.org/a/0gp9MSJcSAIC5WrdmUXYiaZRs)
 
 ### Calc game demo
 
-[![asciicast](https://asciinema.org/a/kIti3bUMQp2XEkfmhfJqqYyUV.svg)](https://asciinema.org/a/kIti3bUMQp2XEkfmhfJqqYyUV)
+[![asciicast](https://asciinema.org/a/nSqsgtkBv4q6jIhyrbknm2bs7.svg)](https://asciinema.org/a/nSqsgtkBv4q6jIhyrbknm2bs7)
