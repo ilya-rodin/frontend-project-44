@@ -7,7 +7,7 @@ const calcGCD = (firstNumber, secondNumber) => {
     if (first > second) {
       first -= second;
     } else {
-      second -= firstNumber;
+      second -= first;
     }
   }
   return first;
