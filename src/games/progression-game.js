@@ -27,7 +27,7 @@ const hideRandomElement = (progression) => {
   const hiddenElementIndex = generateNumber(progression.length - 1);
   const hiddenElement = progression[hiddenElementIndex];
   const progressionCopy = [...progression];
-  
+
   progressionCopy[hiddenElementIndex] = '..';
   const result = progressionCopy.join(' ');
 
