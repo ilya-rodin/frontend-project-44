@@ -5,7 +5,7 @@ const generateProgression = () => {
   const minLength = 5;
   const progression = [];
   const progressionLength = minLength + generateNumber(5);
-  const progressionDiff = Math.floor(Math.random() * 15 + 1);
+  const progressionDiff = generateNumber(15);
 
   let previous;
   for (let i = 0; i < progressionLength; i += 1) {
@@ -24,12 +24,14 @@ const generateProgression = () => {
 };
 
 const hideRandomElement = (progression) => {
-  const hiddenElementIndex = Math.floor(Math.random() * progression.length);
+  const hiddenElementIndex = generateNumber(progression.length - 1);
   const hiddenElement = progression[hiddenElementIndex];
   const progressionCopy = [...progression];
+  
   progressionCopy[hiddenElementIndex] = '..';
+  const result = progressionCopy.join(' ');
 
-  return [hiddenElement, progressionCopy.join(' ')];
+  return [hiddenElement, result];
 };
 
 export default () => {
@@ -38,7 +40,6 @@ export default () => {
 
   console.log('What number is missing in the progression?');
   console.log(`Question: ${progressionString}`);
-
   const userAnswer = readlineSync.questionInt('Your answer: ');
 
   return [userAnswer, correctAnswer];

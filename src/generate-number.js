@@ -1,1 +1,1 @@
-export default (maxNumber) => Math.floor(Math.random() * maxNumber + 1);
+export default (maxNumber = 15) => Math.floor(Math.random() * maxNumber + 1);

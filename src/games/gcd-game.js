@@ -1,25 +1,27 @@
 import readlineSync from 'readline-sync';
+import generateNumber from '../generate-number.js';
 
 const calcGCD = (firstNumber, secondNumber) => {
-  let first = firstNumber;
+  let result = firstNumber;
   let second = secondNumber;
-  while (first !== second) {
-    if (first > second) {
-      first -= second;
+  while (result !== second) {
+    if (result > second) {
+      result -= second;
     } else {
-      second -= first;
+      second -= result;
     }
   }
-  return first;
+  return result;
 };
 
-const generateRandomNumbers = (maxNumber) => [
-  Math.floor(Math.random() * maxNumber + 1),
-  Math.floor(Math.random() * maxNumber + 1),
+const generateTwoRandomNumbers = (maxNumber = 15) => [
+  generateNumber(maxNumber),
+  generateNumber(maxNumber),
 ];
 
 export default () => {
-  const [firstNumber, secondNumber] = generateRandomNumbers(50);
+  const [firstNumber, secondNumber] = generateTwoRandomNumbers(50);
+
   console.log('Find the greatest common divisor of given numbers.');
   console.log(`Question: ${firstNumber} ${secondNumber}`);
 

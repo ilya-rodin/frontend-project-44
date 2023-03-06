@@ -7,7 +7,6 @@ export default () => {
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   console.log(`Question: ${number}`);
-
   const userAnswer = readlineSync.question('Your answer: ');
 
   return [userAnswer, correctAnswer];
