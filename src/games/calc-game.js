@@ -4,7 +4,7 @@ import playSeveralTimes from '../index.js';
 
 const generateOperator = (operators) => operators[generateNumber(operators.length - 1)];
 
-const calcAnswer = (operator) => {
+const calcAnswer = (operator, firstNumber, secondNumber) => {
   switch (operator) {
     case '+':
       correctAnswer = firstNumber + secondNumber;
@@ -26,7 +26,7 @@ const playCalcGame = () => {
   const firstNumber = generateNumber(50);
   const secondNumber = generateNumber(50);
   const randomOperator = generateOperator(operators);
-  const correctAnswer = calcAnswer(randomOperator);
+  const correctAnswer = calcAnswer(randomOperator, firstNumber, secondNumber);
 
   console.log('What is the result of the expression?');
   console.log(`Question: ${firstNumber} ${randomOperator} ${secondNumber}`);
