@@ -45,4 +45,4 @@ const playProgression = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playProgression, repeats);
+export default (repeats) => playSeveralTimes(playProgression, repeats, 'progression');

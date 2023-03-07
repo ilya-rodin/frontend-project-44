@@ -23,4 +23,4 @@ const playPrime = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playPrime, repeats);
+export default (repeats) => playSeveralTimes(playPrime, repeats, 'prime');

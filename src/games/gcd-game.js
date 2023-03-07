@@ -26,4 +26,4 @@ const playGCD = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playGCD, repeats);
+export default (repeats) => playSeveralTimes(playGCD, repeats, 'gcd');

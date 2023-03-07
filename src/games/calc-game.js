@@ -37,4 +37,4 @@ const playCalc = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playCalc, repeats);
+export default (repeats) => playSeveralTimes(playCalc, repeats, 'calc');
