@@ -2,4 +2,4 @@
 
 import playGame from '../src/games/prime-game.js';
 
-playGame(3, 'prime');
+playGame(3);
