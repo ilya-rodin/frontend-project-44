@@ -1,7 +1,7 @@
 export default (maxNumber = 15, count = 1) => {
   if (count < 1) {
-    console.log(`count cannot be less than 1`);
-    return;
+    console.log('count cannot be less than 1');
+    return null;
   }
 
   if (count > 1) {
@@ -11,5 +11,7 @@ export default (maxNumber = 15, count = 1) => {
     }
     return result;
   }
-  return Math.floor(Math.random() * maxNumber + 1);
+
+  const result = Math.floor(Math.random() * maxNumber + 1);
+  return result;
 };

@@ -22,9 +22,9 @@ const calcAnswer = (operator, firstNumber, secondNumber) => {
   }
 
   return correctAnswer;
-}
+};
 
-const playCalcGame = () => {
+const playCalc = () => {
   const operators = ['+', '-', '*'];
   const firstNumber = generateNumber(50);
   const secondNumber = generateNumber(50);
@@ -37,4 +37,4 @@ const playCalcGame = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playCalcGame, repeats);
+export default (repeats) => playSeveralTimes(playCalc, repeats);

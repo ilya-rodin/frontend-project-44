@@ -4,7 +4,7 @@ import playSeveralTimes from '../index.js';
 
 const isEven = (number) => {
   if (number % 2 === 0) {
-    return true
+    return true;
   }
   return false;
 };
@@ -16,7 +16,7 @@ const playEven = () => {
   console.log(`Question: ${number}`);
 
   let userAnswer = readlineSync.question('Your answer: ');
-  userAnswer = userAnswer === 'yes' ? true : false;
+  userAnswer = userAnswer === 'yes';
 
   return [userAnswer, correctAnswer];
 };

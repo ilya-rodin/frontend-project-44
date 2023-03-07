@@ -23,9 +23,7 @@ const displayGameMessage = (game) => {
   }
 };
 
-const getGameName = (game) => {
-  return game.name.slice(4).toLowerCase();
-}
+const getGameName = (game) => game.name.slice(4).toLowerCase();
 
 export default (playOneRound, repeats) => {
   const userName = greetUser();
