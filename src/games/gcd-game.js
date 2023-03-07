@@ -15,13 +15,8 @@ const calcGCD = (firstNumber, secondNumber) => {
   return result;
 };
 
-const generateTwoRandomNumbers = (maxNumber = 15) => [
-  generateNumber(maxNumber),
-  generateNumber(maxNumber),
-];
-
 const playGCD = () => {
-  const [firstNumber, secondNumber] = generateTwoRandomNumbers(50);
+  const [firstNumber, secondNumber] = generateNumber(50, 2);
 
   console.log('Find the greatest common divisor of given numbers.');
   console.log(`Question: ${firstNumber} ${secondNumber}`);

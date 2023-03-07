@@ -2,25 +2,10 @@ import readlineSync from 'readline-sync';
 import generateNumber from '../utils.js';
 import playSeveralTimes from '../index.js';
 
-const generateRandomNumbers = (maxNumber) => {
-  const result = [];
-  for (let i = 0; i < 2; i += 1) {
-    result.push(generateNumber(maxNumber));
-  }
-
-  return result;
-};
-
 const generateOperator = (operators) => operators[generateNumber(operators.length - 1)];
 
-const playCalcGame = () => {
-  const operators = ['+', '-', '*'];
-  const numbers = generateRandomNumbers(50);
-  const [firstNumber, secondNumber] = numbers;
-  const randomOperator = generateOperator(operators);
-
-  let correctAnswer;
-  switch (randomOperator) {
+const calcAnswer = (operator) => {
+  switch (operator) {
     case '+':
       correctAnswer = firstNumber + secondNumber;
       break;
@@ -34,6 +19,14 @@ const playCalcGame = () => {
       console.log('No match operator');
       break;
   }
+}
+
+const playCalcGame = () => {
+  const operators = ['+', '-', '*'];
+  const firstNumber = generateNumber(50);
+  const secondNumber = generateNumber(50);
+  const randomOperator = generateOperator(operators);
+  const correctAnswer = calcAnswer(randomOperator);
 
   console.log('What is the result of the expression?');
   console.log(`Question: ${firstNumber} ${randomOperator} ${secondNumber}`);

@@ -2,13 +2,22 @@ import readlineSync from 'readline-sync';
 import generateNumber from '../utils.js';
 import playSeveralTimes from '../index.js';
 
+const isEven = (number) => {
+  if (number % 2 === 0) {
+    return true
+  }
+  return false;
+};
+
 const playEven = () => {
   const number = generateNumber(100);
-  const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = isEven(number);
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   console.log(`Question: ${number}`);
-  const userAnswer = readlineSync.question('Your answer: ');
+
+  let userAnswer = readlineSync.question('Your answer: ');
+  userAnswer = userAnswer === 'yes' ? true : false;
 
   return [userAnswer, correctAnswer];
 };
