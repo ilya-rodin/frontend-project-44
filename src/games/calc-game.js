@@ -5,6 +5,7 @@ import playSeveralTimes from '../index.js';
 const generateOperator = (operators) => operators[generateNumber(operators.length - 1)];
 
 const calcAnswer = (operator, firstNumber, secondNumber) => {
+  let correctAnswer;
   switch (operator) {
     case '+':
       correctAnswer = firstNumber + secondNumber;
@@ -19,6 +20,8 @@ const calcAnswer = (operator, firstNumber, secondNumber) => {
       console.log('No match operator');
       break;
   }
+
+  return correctAnswer;
 }
 
 const playCalcGame = () => {
@@ -28,7 +31,6 @@ const playCalcGame = () => {
   const randomOperator = generateOperator(operators);
   const correctAnswer = calcAnswer(randomOperator, firstNumber, secondNumber);
 
-  console.log('What is the result of the expression?');
   console.log(`Question: ${firstNumber} ${randomOperator} ${secondNumber}`);
   const userAnswer = readlineSync.questionInt('Your answer: ');
 

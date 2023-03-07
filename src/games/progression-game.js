@@ -39,7 +39,6 @@ const playProgression = () => {
   const progression = generateProgression();
   const [correctAnswer, progressionString] = hideRandomElement(progression);
 
-  console.log('What number is missing in the progression?');
   console.log(`Question: ${progressionString}`);
   const userAnswer = readlineSync.questionInt('Your answer: ');
 

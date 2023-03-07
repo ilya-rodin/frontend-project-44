@@ -18,7 +18,6 @@ const calcGCD = (firstNumber, secondNumber) => {
 const playGCD = () => {
   const [firstNumber, secondNumber] = generateNumber(50, 2);
 
-  console.log('Find the greatest common divisor of given numbers.');
   console.log(`Question: ${firstNumber} ${secondNumber}`);
 
   const correctAnswer = calcGCD(firstNumber, secondNumber);

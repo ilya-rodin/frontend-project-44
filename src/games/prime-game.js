@@ -17,7 +17,6 @@ const playPrime = () => {
   const number = generateNumber(35);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
 
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   console.log(`Question: ${number}`);
   const userAnswer = readlineSync.question('Your answer: ');
 

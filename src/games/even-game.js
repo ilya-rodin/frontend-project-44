@@ -13,7 +13,6 @@ const playEven = () => {
   const number = generateNumber(100);
   const correctAnswer = isEven(number);
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   console.log(`Question: ${number}`);
 
   let userAnswer = readlineSync.question('Your answer: ');
