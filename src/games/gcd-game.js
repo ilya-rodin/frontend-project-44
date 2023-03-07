@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../generate-number.js';
+import generateNumber from '../utils.js';
+import playSeveralTimes from '../index.js';
 
 const calcGCD = (firstNumber, secondNumber) => {
   let result = firstNumber;
@@ -19,7 +20,7 @@ const generateTwoRandomNumbers = (maxNumber = 15) => [
   generateNumber(maxNumber),
 ];
 
-export default () => {
+const playGCD = () => {
   const [firstNumber, secondNumber] = generateTwoRandomNumbers(50);
 
   console.log('Find the greatest common divisor of given numbers.');
@@ -30,3 +31,5 @@ export default () => {
 
   return [userAnswer, correctAnswer];
 };
+
+export default (repeats) => playSeveralTimes(playGCD, repeats);

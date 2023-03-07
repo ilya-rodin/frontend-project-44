@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../generate-number.js';
+import generateNumber from '../utils.js';
+import playSeveralTimes from '../index.js';
 
 const generateRandomNumbers = (maxNumber) => {
   const result = [];
@@ -12,7 +13,7 @@ const generateRandomNumbers = (maxNumber) => {
 
 const generateOperator = (operators) => operators[generateNumber(operators.length - 1)];
 
-export default () => {
+const playCalcGame = () => {
   const operators = ['+', '-', '*'];
   const numbers = generateRandomNumbers(50);
   const [firstNumber, secondNumber] = numbers;
@@ -40,3 +41,5 @@ export default () => {
 
   return [userAnswer, correctAnswer];
 };
+
+export default (repeats) => playSeveralTimes(playCalcGame, repeats);

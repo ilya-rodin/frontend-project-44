@@ -1,7 +1,9 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../generate-number.js';
+import generateNumber from '../utils.js';
+import playSeveralTimes from '../index.js';
 
-export default () => {
+
+const playEven = () => {
   const number = generateNumber(100);
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
 
@@ -11,3 +13,5 @@ export default () => {
 
   return [userAnswer, correctAnswer];
 };
+
+export default (repeats) => playSeveralTimes(playEven, repeats);

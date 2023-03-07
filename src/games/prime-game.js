@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../generate-number.js';
+import generateNumber from '../utils.js';
+import playSeveralTimes from '../index.js';
 
 const checkPrime = (number) => {
   let isPrime = number !== 1;
@@ -12,7 +13,7 @@ const checkPrime = (number) => {
   return isPrime;
 };
 
-export default () => {
+const playPrime = () => {
   const number = generateNumber(35);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
 
@@ -22,3 +23,5 @@ export default () => {
 
   return [userAnswer, correctAnswer];
 };
+
+export default (repeats) => playSeveralTimes(playPrime, repeats);

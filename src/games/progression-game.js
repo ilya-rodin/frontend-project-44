@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../generate-number.js';
+import generateNumber from '../utils.js';
+import playSeveralTimes from '../index.js';
 
 const generateProgression = () => {
   const minLength = 5;
@@ -34,7 +35,7 @@ const hideRandomElement = (progression) => {
   return [hiddenElement, result];
 };
 
-export default () => {
+const playProgression = () => {
   const progression = generateProgression();
   const [correctAnswer, progressionString] = hideRandomElement(progression);
 
@@ -44,3 +45,5 @@ export default () => {
 
   return [userAnswer, correctAnswer];
 };
+
+export default (repeats) => playSeveralTimes(playProgression, repeats);
