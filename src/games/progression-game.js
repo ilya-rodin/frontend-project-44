@@ -3,22 +3,11 @@ import playSeveralTimes from '../index.js';
 
 const gameMessage = 'What number is missing in the progression?';
 
-const generateProgression = (minLength) => {
+const generateProgression = (start, step, maxElems) => {
   const progression = [];
-  const progressionLength = generateNumber(minLength, 10);
-  const progressionDiff = generateNumber(1, 15);
 
-  let previous;
-  for (let i = 0; i < progressionLength; i += 1) {
-    if (i === 0) {
-      const firstItem = generateNumber(1, 20);
-      progression.push(firstItem);
-      previous = firstItem;
-    } else {
-      const item = previous + progressionDiff;
-      previous = item;
-      progression.push(item);
-    }
+  for (let i = 0; i < maxElems - 1; i += 1) {
+    progression.push(start + i * step);
   }
 
   return progression;
@@ -36,7 +25,10 @@ const hideRandomElement = (progression) => {
 };
 
 const playProgression = () => {
-  const progression = generateProgression(5);
+  const start = generateNumber(1, 10);
+  const step = generateNumber(5, 15);
+  const maxElems = generateNumber(5, 12);
+  const progression = generateProgression(start, step, maxElems);
   const [correctAnswer, progressionString] = hideRandomElement(progression);
   const question = `Question: ${progressionString}`;
 
