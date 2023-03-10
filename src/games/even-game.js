@@ -1,4 +1,4 @@
-import { generateNumber } from '../utils.js';
+import generateNumber from '../utils.js';
 import playSeveralTimes from '../index.js';
 
 const gameMessage = 'Answer "yes" if the number is even, otherwise answer "no".';

@@ -1,4 +1,4 @@
-import { generateNumber } from '../utils.js';
+import generateNumber from '../utils.js';
 import playSeveralTimes from '../index.js';
 
 const gameMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
