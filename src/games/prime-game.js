@@ -15,7 +15,7 @@ const checkPrime = (number) => {
 };
 
 const playPrime = () => {
-  const number = generateNumber(1, 35);
+  const number = generateNumber(1, 150);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
   const question = `Question: ${number}`;
 
