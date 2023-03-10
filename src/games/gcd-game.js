@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
+const gameMessage = 'Find the greatest common divisor of given numbers.';
+
 const calcGCD = (firstNumber, secondNumber) => {
   let result = firstNumber;
   let second = secondNumber;
@@ -27,4 +29,4 @@ const playGCD = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playGCD, repeats, 'gcd');
+export default (repeats) => playSeveralTimes(playGCD, repeats, gameMessage);

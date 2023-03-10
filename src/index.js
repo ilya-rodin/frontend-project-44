@@ -1,27 +1,9 @@
 import greetUser from './cli.js';
 
-const gamesNames = ['calc', 'even', 'gcd', 'prime', 'progression'];
-const gamesMessages = [
-  'What is the result of the expression?',
-  'Answer "yes" if the number is even, otherwise answer "no".',
-  'Find the greatest common divisor of given numbers.',
-  'Answer "yes" if given number is prime. Otherwise answer "no".',
-  'What number is missing in the progression?',
-];
-
-const displayGameMessage = (gameName) => {
-  if (gamesNames.includes(gameName)) {
-    const message = gamesMessages[gamesNames.indexOf(gameName)];
-    console.log(message);
-  } else {
-    console.log('Game name not found!');
-  }
-};
-
-export default (playOneRound, repeats, gameName) => {
+export default (playOneRound, repeats, gameMessage) => {
   const userName = greetUser();
   for (let i = 0; i < repeats; i += 1) {
-    displayGameMessage(gameName);
+    console.log(gameMessage);
     const [userAnswer, correctAnswer] = playOneRound(userName);
 
     if (userAnswer !== correctAnswer) {

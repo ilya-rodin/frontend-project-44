@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
+const gameMessage = 'What number is missing in the progression?';
+
 const generateProgression = (minLength) => {
   const progression = [];
   const progressionLength = generateNumber(minLength, 10);
@@ -44,4 +46,4 @@ const playProgression = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playProgression, repeats, 'progression');
+export default (repeats) => playSeveralTimes(playProgression, repeats, gameMessage);
