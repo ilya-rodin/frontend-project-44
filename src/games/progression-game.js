@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../utils.js';
+import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
-const generateProgression = () => {
-  const minLength = 5;
+const generateProgression = (minLength) => {
   const progression = [];
-  const progressionLength = minLength + generateNumber(5);
+  const progressionLength = generateNumber(minLength, 10);
   const progressionDiff = generateNumber(15);
 
   let previous;
@@ -36,7 +35,7 @@ const hideRandomElement = (progression) => {
 };
 
 const playProgression = () => {
-  const progression = generateProgression();
+  const progression = generateProgression(5);
   const [correctAnswer, progressionString] = hideRandomElement(progression);
 
   console.log(`Question: ${progressionString}`);

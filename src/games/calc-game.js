@@ -1,27 +1,21 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../utils.js';
+import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
-const generateOperator = (operators) => operators[generateNumber(operators.length - 1)];
+const generateOperator = (operators) => operators[generateNumber(0, operators.length - 1)];
 
 const calcAnswer = (operator, firstNumber, secondNumber) => {
-  let correctAnswer;
   switch (operator) {
     case '+':
-      correctAnswer = firstNumber + secondNumber;
-      break;
+      return firstNumber + secondNumber;
     case '-':
-      correctAnswer = firstNumber - secondNumber;
-      break;
+      return firstNumber - secondNumber;
     case '*':
-      correctAnswer = firstNumber * secondNumber;
-      break;
+      return firstNumber * secondNumber;
     default:
       console.log('No match operator');
-      break;
+      return null;
   }
-
-  return correctAnswer;
 };
 
 const playCalc = () => {

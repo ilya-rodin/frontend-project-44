@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../utils.js';
+import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
 const calcGCD = (firstNumber, secondNumber) => {
@@ -16,7 +16,8 @@ const calcGCD = (firstNumber, secondNumber) => {
 };
 
 const playGCD = () => {
-  const [firstNumber, secondNumber] = generateNumber(50, 2);
+  const firstNumber = generateNumber(1, 50);
+  const secondNumber = generateNumber(1, 50);
 
   console.log(`Question: ${firstNumber} ${secondNumber}`);
 

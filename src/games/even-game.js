@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../utils.js';
+import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
 const isEven = (number) => {
@@ -10,7 +10,7 @@ const isEven = (number) => {
 };
 
 const playEven = () => {
-  const number = generateNumber(100);
+  const number = generateNumber(1, 150);
   const correctAnswer = isEven(number);
 
   console.log(`Question: ${number}`);

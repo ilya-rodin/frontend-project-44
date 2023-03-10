@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import generateNumber from '../utils.js';
+import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
 const checkPrime = (number) => {
@@ -14,7 +14,7 @@ const checkPrime = (number) => {
 };
 
 const playPrime = () => {
-  const number = generateNumber(35);
+  const number = generateNumber(1, 35);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
 
   console.log(`Question: ${number}`);
