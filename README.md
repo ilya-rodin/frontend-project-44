@@ -10,9 +10,10 @@ Node.js version: 18.14.2 LTS
 
 npm version: 9.5.0
 
-## Setup
+## Install
 
 ```bash
+$ npm install @hexlet/code
 $ make install
 $ npm link
 ```
