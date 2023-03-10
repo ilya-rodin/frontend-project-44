@@ -25,9 +25,9 @@ const hideRandomElement = (progression) => {
 };
 
 const playProgression = () => {
-  const start = generateNumber(1, 10);
+  const start = generateNumber(1, 15);
   const step = generateNumber(5, 15);
-  const maxElems = generateNumber(5, 12);
+  const maxElems = generateNumber(6, 15);
   const progression = generateProgression(start, step, maxElems);
   const [correctAnswer, progressionString] = hideRandomElement(progression);
   const question = `Question: ${progressionString}`;
