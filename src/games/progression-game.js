@@ -5,12 +5,12 @@ import playSeveralTimes from '../index.js';
 const generateProgression = (minLength) => {
   const progression = [];
   const progressionLength = generateNumber(minLength, 10);
-  const progressionDiff = generateNumber(15);
+  const progressionDiff = generateNumber(1, 15);
 
   let previous;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === 0) {
-      const firstItem = generateNumber(20);
+      const firstItem = generateNumber(1, 20);
       progression.push(firstItem);
       previous = firstItem;
     } else {
@@ -24,7 +24,7 @@ const generateProgression = (minLength) => {
 };
 
 const hideRandomElement = (progression) => {
-  const hiddenElementIndex = generateNumber(progression.length - 1);
+  const hiddenElementIndex = generateNumber(0, progression.length - 1);
   const hiddenElement = progression[hiddenElementIndex];
   const progressionCopy = [...progression];
 

@@ -1,6 +1,6 @@
 export const generateNumber = (min, max) => {
-  if (min < 1) {
-    console.log('count cannot be less than 1');
+  if (min < 0) {
+    console.log('count cannot be less than 0');
     return null;
   }
 
