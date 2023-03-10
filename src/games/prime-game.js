@@ -25,4 +25,4 @@ const playPrime = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playPrime, repeats, gameMessage);
+export default () => playSeveralTimes(playPrime, gameMessage);

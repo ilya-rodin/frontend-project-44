@@ -33,4 +33,4 @@ const playCalc = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playCalc, repeats, gameMessage);
+export default () => playSeveralTimes(playCalc, gameMessage);

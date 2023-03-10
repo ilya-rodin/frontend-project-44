@@ -1,6 +1,8 @@
 import greetUser from './cli.js';
 
-export default (playOneRound, repeats, gameMessage) => {
+const repeats = 3;
+
+export default (playOneRound, gameMessage) => {
   const userName = greetUser();
   for (let i = 0; i < repeats; i += 1) {
     console.log(gameMessage);

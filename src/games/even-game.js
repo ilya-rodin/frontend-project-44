@@ -23,4 +23,4 @@ const playEven = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playEven, repeats, gameMessage);
+export default () => playSeveralTimes(playEven, gameMessage);

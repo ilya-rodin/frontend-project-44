@@ -46,4 +46,4 @@ const playProgression = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default (repeats) => playSeveralTimes(playProgression, repeats, gameMessage);
+export default () => playSeveralTimes(playProgression, gameMessage);
