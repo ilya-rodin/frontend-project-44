@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
@@ -18,11 +17,9 @@ const checkPrime = (number) => {
 const playPrime = () => {
   const number = generateNumber(1, 35);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
+  const question = `Question: ${number}`;
 
-  console.log(`Question: ${number}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-
-  return [userAnswer, correctAnswer];
+  return [question, correctAnswer];
 };
 
 export default () => playSeveralTimes(playPrime, gameMessage);

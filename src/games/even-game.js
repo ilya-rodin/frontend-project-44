@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
@@ -13,14 +12,10 @@ const isEven = (number) => {
 
 const playEven = () => {
   const number = generateNumber(1, 150);
-  const correctAnswer = isEven(number);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const question = `Question: ${number}`;
 
-  console.log(`Question: ${number}`);
-
-  let userAnswer = readlineSync.question('Your answer: ');
-  userAnswer = userAnswer === 'yes';
-
-  return [userAnswer, correctAnswer];
+  return [question, correctAnswer];
 };
 
 export default () => playSeveralTimes(playEven, gameMessage);

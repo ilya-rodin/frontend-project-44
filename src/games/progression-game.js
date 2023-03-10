@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
@@ -39,11 +38,9 @@ const hideRandomElement = (progression) => {
 const playProgression = () => {
   const progression = generateProgression(5);
   const [correctAnswer, progressionString] = hideRandomElement(progression);
+  const question = `Question: ${progressionString}`;
 
-  console.log(`Question: ${progressionString}`);
-  const userAnswer = readlineSync.questionInt('Your answer: ');
-
-  return [userAnswer, correctAnswer];
+  return [question, correctAnswer.toString()];
 };
 
 export default () => playSeveralTimes(playProgression, gameMessage);

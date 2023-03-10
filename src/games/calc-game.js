@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
@@ -26,11 +25,9 @@ const playCalc = () => {
   const secondNumber = generateNumber(1, 50);
   const randomOperator = generateOperator(operators);
   const correctAnswer = calcAnswer(randomOperator, firstNumber, secondNumber);
+  const question = `Question: ${firstNumber} ${randomOperator} ${secondNumber}`;
 
-  console.log(`Question: ${firstNumber} ${randomOperator} ${secondNumber}`);
-  const userAnswer = readlineSync.questionInt('Your answer: ');
-
-  return [userAnswer, correctAnswer];
+  return [question, correctAnswer.toString()];
 };
 
 export default () => playSeveralTimes(playCalc, gameMessage);

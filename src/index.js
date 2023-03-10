@@ -1,3 +1,4 @@
+import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 
 const repeats = 3;
@@ -5,8 +6,11 @@ const repeats = 3;
 export default (playOneRound, gameMessage) => {
   const userName = greetUser();
   for (let i = 0; i < repeats; i += 1) {
+    const [question, correctAnswer] = playOneRound(userName);
     console.log(gameMessage);
-    const [userAnswer, correctAnswer] = playOneRound(userName);
+    console.log(question);
+
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
       console.log(
