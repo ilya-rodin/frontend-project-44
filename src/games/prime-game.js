@@ -1,7 +1,8 @@
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
-const gameMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameMessage =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const checkPrime = (number) => {
   let isPrime = number !== 1;
@@ -15,7 +16,7 @@ const checkPrime = (number) => {
 };
 
 const playPrime = () => {
-  const number = generateNumber(1, 150);
+  const number = generateNumber(1, 50);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
   const question = `Question: ${number}`;
 
