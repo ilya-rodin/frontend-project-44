@@ -1,11 +1,12 @@
 import { generateNumber } from '../utils.js';
 import playSeveralTimes from '../index.js';
 
-const gameMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameMessage =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const checkPrime = (number) => {
   let isPrime = number !== 1;
-  for (let i = 2; i < Math.sqrt(number); i += 1) {
+  for (let i = 2; i < Math.sqrt(number) + 1; i += 1) {
     if (number % i === 0) {
       isPrime = false;
       break;
