@@ -5,6 +5,10 @@ const gameMessage =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const checkPrime = (number) => {
+  if (number === 2) {
+    return true;
+  }
+
   let isPrime = number !== 1;
   for (let i = 2; i < Math.sqrt(number) + 1; i += 1) {
     if (number % i === 0) {
