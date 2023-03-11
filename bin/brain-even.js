@@ -2,4 +2,4 @@
 
 import playGame from '../src/games/even-game.js';
 
-playGame(3);
+playGame();
