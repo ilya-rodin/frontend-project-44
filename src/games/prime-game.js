@@ -5,18 +5,16 @@ const gameMessage =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const checkPrime = (number) => {
-  if (number === 2) {
-    return true;
+  if (number <= 1) {
+    return false;
   }
 
-  let isPrime = number !== 1;
-  for (let i = 2; i < Math.sqrt(number) + 1; i += 1) {
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) {
-      isPrime = false;
-      break;
+      return false;
     }
   }
-  return isPrime;
+  return true;
 };
 
 const playPrime = () => {
