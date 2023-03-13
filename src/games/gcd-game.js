@@ -4,16 +4,10 @@ import playSeveralTimes from '../index.js';
 const gameMessage = 'Find the greatest common divisor of given numbers.';
 
 const calcGCD = (firstNumber, secondNumber) => {
-  let result = firstNumber;
-  let second = secondNumber;
-  while (result !== second) {
-    if (result > second) {
-      result -= second;
-    } else {
-      second -= result;
-    }
+  if (secondNumber === 0) {
+    return firstNumber;
   }
-  return result;
+  return calcGCD(secondNumber, firstNumber % secondNumber);
 };
 
 const playGCD = () => {
