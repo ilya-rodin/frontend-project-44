@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 
-const repeats = 3;
+const roundsCount = 3;
 
 export default (playOneRound, gameMessage) => {
   const userName = greetUser();
-  for (let i = 0; i < repeats; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = playOneRound(userName);
     console.log(gameMessage);
     console.log(question);
