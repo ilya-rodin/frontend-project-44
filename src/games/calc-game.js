@@ -1,5 +1,5 @@
 import { generateNumber } from '../utils.js';
-import playSeveralTimes from '../index.js';
+import playGame from '../index.js';
 
 const gameMessage = 'What is the result of the expression?';
 
@@ -30,4 +30,4 @@ const playCalc = () => {
   return [question, correctAnswer.toString()];
 };
 
-export default () => playSeveralTimes(playCalc, gameMessage);
+export default () => playGame(playCalc, gameMessage);

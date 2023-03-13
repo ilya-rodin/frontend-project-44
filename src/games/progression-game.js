@@ -1,5 +1,5 @@
 import { generateNumber } from '../utils.js';
-import playSeveralTimes from '../index.js';
+import playGame from '../index.js';
 
 const gameMessage = 'What number is missing in the progression?';
 
@@ -35,4 +35,4 @@ const playProgression = () => {
   return [question, correctAnswer.toString()];
 };
 
-export default () => playSeveralTimes(playProgression, gameMessage);
+export default () => playGame(playProgression, gameMessage);

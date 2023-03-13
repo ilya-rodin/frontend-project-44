@@ -1,5 +1,5 @@
 import { generateNumber } from '../utils.js';
-import playSeveralTimes from '../index.js';
+import playGame from '../index.js';
 
 const gameMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -13,4 +13,4 @@ const playEven = () => {
   return [question, correctAnswer];
 };
 
-export default () => playSeveralTimes(playEven, gameMessage);
+export default () => playGame(playEven, gameMessage);

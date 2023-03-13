@@ -1,5 +1,5 @@
 import { generateNumber } from '../utils.js';
-import playSeveralTimes from '../index.js';
+import playGame from '../index.js';
 
 const gameMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -24,4 +24,4 @@ const playPrime = () => {
   return [question, correctAnswer];
 };
 
-export default () => playSeveralTimes(playPrime, gameMessage);
+export default () => playGame(playPrime, gameMessage);
