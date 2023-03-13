@@ -10,7 +10,7 @@ export default (playOneRound, gameMessage) => {
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = playOneRound(userName);
     console.log(gameMessage);
-    console.log(question);
+    console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 

@@ -25,7 +25,7 @@ const playCalc = () => {
   const secondNumber = generateNumber(1, 50);
   const randomOperator = generateOperator(operators);
   const correctAnswer = calcAnswer(randomOperator, firstNumber, secondNumber);
-  const question = `Question: ${firstNumber} ${randomOperator} ${secondNumber}`;
+  const question = `${firstNumber} ${randomOperator} ${secondNumber}`;
 
   return [question, correctAnswer.toString()];
 };

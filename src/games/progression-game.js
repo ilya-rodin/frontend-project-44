@@ -30,7 +30,7 @@ const playProgression = () => {
   const maxElems = generateNumber(6, 15);
   const progression = generateProgression(start, step, maxElems);
   const [correctAnswer, progressionString] = hideRandomElement(progression);
-  const question = `Question: ${progressionString}`;
+  const question = `${progressionString}`;
 
   return [question, correctAnswer.toString()];
 };

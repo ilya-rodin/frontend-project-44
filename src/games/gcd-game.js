@@ -14,7 +14,7 @@ const playGCD = () => {
   const firstNumber = generateNumber(1, 50);
   const secondNumber = generateNumber(1, 50);
   const correctAnswer = calcGCD(firstNumber, secondNumber);
-  const question = `Question: ${firstNumber} ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
 
   return [question, correctAnswer.toString()];
 };

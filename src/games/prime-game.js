@@ -19,7 +19,7 @@ const checkPrime = (number) => {
 const playPrime = () => {
   const number = generateNumber(1, 50);
   const correctAnswer = checkPrime(number) ? 'yes' : 'no';
-  const question = `Question: ${number}`;
+  const question = `${number}`;
 
   return [question, correctAnswer];
 };
